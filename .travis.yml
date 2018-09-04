@@ -13,7 +13,7 @@ script:
   - npm run build
 
 after_success:
-  - npm run dist-cname
+  - npm run after-deploy
   - ls dist/
 
 notifications:

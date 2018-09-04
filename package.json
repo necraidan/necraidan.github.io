@@ -11,7 +11,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "prod-deploy": "gulp band",
-        "dist-cname": "echo \"necraidan.com\" >> dist/CNAME",
+        "after-deploy": "sh scripts/afterDeploy.sh",
         "prettify": "prettier --write src/**/**/*.ts"
     },
     "private": true,
