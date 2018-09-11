@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-        let myWorker = new Worker('../assets/worker.js');
+        const myWorker = new Worker('../assets/worker.js');
 
         myWorker.postMessage([3, 4]); // Sending message as an array to the worker
         console.log('Message posted to worker');
