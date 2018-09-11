@@ -8,6 +8,9 @@
     align-items: center;
     justify-items: center;
 
+    &.inverted {
+        filter: invert(100%);
+    }
     .catch-job {
         grid-area: catch-job;
 
