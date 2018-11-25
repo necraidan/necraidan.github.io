@@ -7,9 +7,9 @@ import { EventEmitter, Directive, Output, HostListener } from '@angular/core';
 export class KonamiDirective {
     @Output() konami: EventEmitter<void> = new EventEmitter();
 
-    private _seq: string[] = [];
+    private seq: string[] = [];
 
-    private _konamiCode: string[] = ['38', '38', '40', '40', '37', '39', '37', '39', '66', '65'];
+    private konamiCode: string[] = ['38', '38', '40', '40', '37', '39', '37', '39', '66', '65'];
 
     constructor() {}
 
@@ -17,10 +17,10 @@ export class KonamiDirective {
     @HostListener('document:keydown', ['$event'])
     handleKeyboardEvent(event: KeyboardEvent) {
         if (event.keyCode) {
-            this._seq.push(event.keyCode.toString());
+            this.seq.push(event.keyCode.toString());
 
             // tslint:disable:no-unused-expression
-            this._seq.length > this._konamiCode.length && this._seq.shift();
+            this.seq.length > this.konamiCode.length && this.seq.shift();
 
             this.isKonamiCode() && this.konami.emit();
         }
@@ -28,6 +28,6 @@ export class KonamiDirective {
     // tslint:enable:no-unused-expression
 
     isKonamiCode(): boolean {
-        return this._konamiCode.every((code: string, index: number) => code === this._seq[index]);
+        return this.konamiCode.every((code: string, index: number) => code === this.seq[index]);
     }
 }
