@@ -421,12 +421,14 @@ body {
   }
 
   #username {
+    font-size: 1.2em;
   }
   #username span {
+    font-size: 1.2em;
   }
 
   #userbio {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
 
   #about {
