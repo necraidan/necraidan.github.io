@@ -10,6 +10,7 @@
 <link rel="icon" href="https://avatars0.githubusercontent.com/u/1424833?v=4" type="image/png">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53566809-1"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -24,6 +25,7 @@
     </div>
     <div id="profile">
         <div id="profile_img" style="background: url(https://avatars0.githubusercontent.com/u/1424833?v=4) center;"></div>
+        <!-- <div id="uni">🦄</div> -->
         <div id="username"><span style="display:block;">Benjamin Auzanneau</span>@necraidan</div>
         <div id="userbio" style="display: block;">Dev at Thales, JavaScript Hero</div>
         <div id="about">
@@ -226,6 +228,12 @@
         </div>
     </div>
     <script type="text/javascript">
+    window.addEventListener('load', function () {
+        VanillaTilt.init(document.querySelector("#profile"), {
+            scale: 1.10
+        });
+    }, false);
+    
     setTimeout(function(){
         document.getElementById("loading").classList.add("animated");
         document.getElementById("loading").classList.add("fadeOut");
@@ -235,26 +243,6 @@
         document.getElementById("loading").style.display = "none";
         },800);
     },1500);
-    $.getJSON("blog.json", function(blog){
-        if(blog.length == 0){
-            return document.getElementById("blog_section").style.display = "none";
-        }
-        for(var i = 0; i < blog.length; i++){
-            $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
-            </a>
-            `);
-        }
-    });
     </script>
 
 </body></html>

@@ -61,6 +61,19 @@ body {
   background-repeat: no-repeat;
   position: fixed;
   color: #fff !important;
+  transform-style: preserve-3d;
+}
+
+#profile * {
+  transform: translateZ(50px);
+}
+
+#uni {
+  font-size: 2em;
+  position: absolute;
+  top: 28vh;
+  left: 13vw;
+  transform: translateZ(362px) rotateY(-270deg);
 }
 
 #display {
@@ -216,6 +229,7 @@ body {
   height: 180px;
   border-radius: 5px;
   background-size: cover !important;
+  margin: 0px auto !important;
 }
 
 #profile div {
@@ -375,11 +389,24 @@ body {
 @media (max-width: 800px) {
   #profile {
     width: 90vw;
-    padding: 4vh 5vw;
+    padding: 8vh 5vw;
     height: 60vh;
     text-align: center;
     position: relative;
   }
+
+  #profile * {
+    transform: translateZ(200px);
+  }
+
+  #uni {
+    font-size: 5em;
+    position: absolute;
+    top: 15vh;
+    left: 43vw;
+    transform: translateZ(383px) rotateY(90deg);
+  }
+
   #display {
     width: 90vw;
     padding: 4vh 5vw;
