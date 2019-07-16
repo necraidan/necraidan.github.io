@@ -229,7 +229,7 @@ body {
   height: 180px;
   border-radius: 5px;
   background-size: cover !important;
-  margin: 0px auto !important;
+  /* margin: 0px auto !important; */
 }
 
 #profile div {
