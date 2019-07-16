@@ -390,13 +390,13 @@ body {
   #profile {
     width: 90vw;
     padding: 8vh 5vw;
-    height: 60vh;
+    height: 70vh;
     text-align: center;
     position: relative;
   }
 
   #profile * {
-    transform: translateZ(200px);
+    transform: translateZ(130px);
   }
 
   #uni {
@@ -419,6 +419,19 @@ body {
     height: 120px;
     margin: 0px auto !important;
   }
+
+  #username {
+  }
+  #username span {
+  }
+
+  #userbio {
+    font-size: 1.25em;
+  }
+
+  #about {
+  }
+
   #work {
     margin: 0px;
   }
