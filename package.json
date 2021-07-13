@@ -1,49 +1,31 @@
 {
-  "name": "necraidan-home",
-  "version": "2.0.0",
-  "license": "MIT",
-  "scripts": {
-    "start": "ng serve",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "ng": "ng",
-    "e2e": "ng e2e",
-    "after-deploy": "sh scripts/afterDeploy.sh",
-    "prettify": "prettier --write src/**/**/*.ts"
-  },
+  "name": "necraidan.com",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
+  },
   "dependencies": {
-    "@angular/animations": "~11.2.7",
-    "@angular/common": "~11.2.7",
-    "@angular/compiler": "~11.2.7",
-    "@angular/core": "~11.2.7",
-    "@angular/forms": "~11.2.7",
-    "@angular/platform-browser": "~11.2.7",
-    "@angular/platform-browser-dynamic": "~11.2.7",
-    "@angular/router": "~11.2.7",
-    "@angular/service-worker": "~11.2.7",
-    "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.11.3"
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.6",
-    "@angular/cli": "~11.2.6",
-    "@angular/compiler-cli": "~11.2.7",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.1.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~4.1.5"
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/tailwindcss": "^4.2.0",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "postcss": "^8.3.5",
+    "prettier": "^2.3.2"
   }
 }
