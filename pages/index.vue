@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Tutorial />
-    <div>test</div>
+    <Header />
   </div>
 </template>
 
