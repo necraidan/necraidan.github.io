@@ -1,12 +1,20 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { ViteSSG } from 'vite-ssg'
+import { setupLayouts } from 'virtual:generated-layouts'
+import App from './App.vue'
+import generatedRoutes from '~pages'
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
+import '@unocss/reset/tailwind.css'
+import './styles/main.css'
+import 'uno.css'
 
-if (environment.production) {
-  enableProdMode();
-}
+const routes = setupLayouts(generatedRoutes)
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+// https://github.com/antfu/vite-ssg
+export const createApp = ViteSSG(
+  App,
+  { routes, base: import.meta.env.BASE_URL },
+  (ctx) => {
+    // install all modules under `modules/`
+    Object.values(import.meta.globEager('./modules/*.ts')).forEach(i => i.install?.(ctx))
+  },
+)
