@@ -1,58 +1,46 @@
 {
+  "name": "necraidan",
+  "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@7.1.6",
   "scripts": {
-    "build": "vite-ssg build",
-    "dev": "vite --port 3333 --open",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "preview-https": "serve dist",
-    "test": "vitest",
-    "test:e2e": "cypress open",
-    "test:unit": "vitest",
-    "typecheck": "vue-tsc --noEmit"
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "@vueuse/core": "^8.6.0",
-    "@vueuse/head": "^0.7.6",
-    "nprogress": "^0.2.0",
-    "pinia": "^2.0.14",
-    "prism-theme-vars": "^0.2.3",
-    "vue": "^3.2.36",
-    "vue-demi": "^0.13.1",
-    "vue-i18n": "^9.1.10",
-    "vue-router": "^4.0.15"
+    "@docusaurus/core": "2.1.0",
+    "@docusaurus/preset-classic": "2.1.0",
+    "@mdx-js/react": "^1.6.22",
+    "clsx": "^1.2.1",
+    "prism-react-renderer": "^1.3.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.25.1",
-    "@iconify-json/carbon": "^1.1.5",
-    "@intlify/vite-plugin-vue-i18n": "^4.0.0",
-    "@types/markdown-it-link-attributes": "^3.0.1",
-    "@types/nprogress": "^0.2.0",
-    "@vitejs/plugin-vue": "^2.3.3",
-    "@vue/test-utils": "^2.0.0",
-    "critters": "^0.0.16",
-    "cross-env": "^7.0.3",
-    "cypress": "^9.7.0",
-    "eslint": "^8.16.0",
-    "eslint-plugin-cypress": "^2.12.1",
-    "https-localhost": "^4.7.1",
-    "markdown-it-link-attributes": "^4.0.0",
-    "markdown-it-prism": "^2.2.4",
-    "pnpm": "^7.1.7",
-    "typescript": "^4.7.2",
-    "unocss": "^0.37.2",
-    "unplugin-auto-import": "^0.8.7",
-    "unplugin-vue-components": "^0.19.6",
-    "vite": "^2.9.9",
-    "vite-plugin-inspect": "^0.5.0",
-    "vite-plugin-md": "^0.14.0",
-    "vite-plugin-pages": "^0.23.0",
-    "vite-plugin-pwa": "^0.12.0",
-    "vite-plugin-vue-layouts": "^0.6.0",
-    "vite-ssg": "^0.20.0",
-    "vite-ssg-sitemap": "^0.2.7",
-    "vitest": "^0.13.1",
-    "vue-tsc": "^0.36.0"
+    "@docusaurus/module-type-aliases": "2.1.0",
+    "@tsconfig/docusaurus": "^1.0.5",
+    "typescript": "^4.7.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.14"
   }
 }
