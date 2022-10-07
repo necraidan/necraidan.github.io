@@ -58,11 +58,11 @@ const config = {
         },
         items: [
           { to: "/blog", label: "Blog", position: "left" },
-          {
-            to: "/front-end-chronicles",
-            label: "Front-End Chronicles",
-            position: "left",
-          },
+          // {
+          //   to: "/front-end-chronicles",
+          //   label: "Front-End Chronicles",
+          //   position: "left",
+          // },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
