@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "necraidan",
   tagline: "Dinosaurs are cool",
   url: "https://necraidan.com",
   baseUrl: "/",
@@ -16,7 +16,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
+  organizationName: "necraidan", // Usually your GitHub org/user name.
   projectName: "necraidan", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
