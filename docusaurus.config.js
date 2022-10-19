@@ -105,7 +105,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} necraidan. Built with Docusaurus 2 and propulsed by Vercel ✨❤️.`,
       },
       prism: {
         theme: lightCodeTheme,
