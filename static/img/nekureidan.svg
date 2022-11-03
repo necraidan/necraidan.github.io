@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 619.64 619.64">
+  <circle
+    cx="311.2"
+    cy="309.53"
+    r="225.53"
+    fill="none"
+    stroke="currentColor"
+    stroke-miterlimit="10"
+    stroke-width="41"
+  />
+  <path
+    d="M330.66,550.92H290.31l-1-180.66c-51.83,32.24-107.14,59.38-153.86,79.55l-21.28-39.2C236.9,360.5,334.32,298.21,394.26,234.8H149.86V194.5H289.35V104h42.08V194.5H438.08l21.9,30c-41.5,47.27-81.85,84.74-128.55,119.9Zm149.51-94.77c-31.7-28.82-66.86-56.49-110.1-85.89l29.4-29.4A846.6,846.6,0,0,1,511.3,425Z"
+  />
+  <line
+    x1="105.85"
+    y1="214.7"
+    x2="513.68"
+    y2="213.26"
+    fill="none"
+    stroke="currentColor"
+    stroke-miterlimit="10"
+    stroke-width="41"
+  />
+  <circle
+    cx="309.82"
+    cy="309.82"
+    r="289.32"
+    fill="none"
+    stroke="currentColor"
+    stroke-miterlimit="10"
+    stroke-width="41"
+  />
+</svg>

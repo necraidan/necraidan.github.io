@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "necraidan",
-  tagline: "Developper.",
+  tagline: "Senior Software Engineer.",
   url: "https://necraidan.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -54,7 +54,7 @@ const config = {
         title: "necraidan",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/nekureidan.svg",
         },
         items: [
           { to: "/blog", label: "Blog", position: "left" },
@@ -88,7 +88,6 @@ const config = {
                 label: "Linkedin",
                 href: "https://www.linkedin.com/in/bauzanneau",
               },
-
             ],
           },
           {
