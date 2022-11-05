@@ -58,6 +58,15 @@ const config = {
         },
         items: [
           { to: "/blog", label: "Blog", position: "left" },
+          {
+            type: "dropdown",
+            label: "About",
+            position: "left",
+            items: [
+              { to: "/ressources", label: "Ressources" },
+              { to: "/uses", label: "Uses" },
+            ],
+          },
           // {
           //   to: "/front-end-chronicles",
           //   label: "Front-End Chronicles",
