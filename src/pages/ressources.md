@@ -8,6 +8,8 @@ I have a strong interest in programming and human science
 I really like to explore his fields.
 Here are my most useful resources, the ones that have helped me see the world as I see it today.
 
+> _Amazon links are not tracked_
+
 ## Articles
 
 - [Ecrivez du code stupide](https://putaindecode.io/articles/2021-01-29-ecrivez-du-code-stupide)
@@ -16,8 +18,6 @@ Here are my most useful resources, the ones that have helped me see the world as
 - [Tradeoffs](https://putaindecode.io/articles/tradeoffs/)
 
 ## Books and repos
-
-_Amazon links are not tracked_
 
 - [Clean code - _coder proprement_](https://www.amazon.fr/Coder-proprement-Robert-C-Martin/dp/232600227X)
 - [CSS 3 Grid Layout: Vous allez enfin aimer CSS](https://www.amazon.fr/CSS-Grid-Layout-allez-enfin/dp/2212676832)
