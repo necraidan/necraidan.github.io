@@ -22,8 +22,8 @@ Feel free to reach out to me on Twitter or Linkedin to ask me about them.
 
 - Safari for daily uses
 - Chrome for developpement
-  - pluginsssss
-  - pluginsssss
+  - [Angular DevTools](https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh)
+  - [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
 - Firefox for developpement
 
 ## Hardware
