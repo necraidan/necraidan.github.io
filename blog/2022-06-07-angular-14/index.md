@@ -14,6 +14,8 @@ Voici le top 3 de ce que j'ai retenu :
 Les composants autonomes font leur apparition en 𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘱𝘦𝘳 𝘱𝘳𝘦𝘷𝘪𝘦𝘸.
 Plus besoin de créer un NgModule pour pouvoir importer/utiliser votre composant.
 
+<!--truncate-->
+
 Disponible également pour les directives et les pipes.
 
 https://angular.io/guide/standalone-components
@@ -37,9 +39,6 @@ En bonus, Minko vous propose de revoir les optimisations que l'on peut faire ave
 By the way, Thanks Minko Gechev for your video !
 {% embed https://www.youtube.com/watch?v=f8sA-i6gkGQ %}
 
-
-
-
 Vous voulez creuser un peu plus sur les nouveautés ?
 C'est par ici :
 
@@ -48,8 +47,9 @@ https://blog.ninja-squad.com/2022/06/02/what-is-new-angular-14.0/
 (Merci la Ninja Squad)
 
 ---
-Merci d'avoir lu cet article ! 
+
+Merci d'avoir lu cet article !
 J'anime également un podcast sur le front-end :
 https://anchor.fm/front-end-chronicles
 
-ou directement sur *spotify* pour le dernier épisode : {% embed https://open.spotify.com/show/6bULbbUOCaHwFw4bOKsJTL %}
+ou directement sur _spotify_ pour le dernier épisode : {% embed https://open.spotify.com/show/6bULbbUOCaHwFw4bOKsJTL %}

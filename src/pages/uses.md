@@ -15,7 +15,6 @@ Feel free to reach out to me on Twitter or Linkedin to ask me about them.
 ### IDEs
 
 - Visual Studio Code
-  - pluginsssss
 - Fleet (in testing)
 
 ### Browsers
