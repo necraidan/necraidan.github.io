@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={` ${siteConfig.title} | 🍕💻 Benjamin Auzanneau (necraidan) - engineered with beers and pizza.`}
-      description=={` ${siteConfig.description} }>
+      description="What if the Blue Eyes White Dragon was in typescript ?">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
