@@ -13,18 +13,11 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "necraidan", // Usually your GitHub org/user name.
-  projectName: "necraidan", // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  organizationName: "necraidan",
+  projectName: "nekureidan",
   i18n: {
-    defaultLocale: "fr",
-    locales: ["fr"],
+    defaultLocale: "en",
+    locales: ["en","fr"],
   },
 
   presets: [
@@ -34,6 +27,8 @@ const config = {
       ({
         docs: false,
         blog: {
+          blogDescription:
+            "What if the Blue Eyes White Dragon was in typescript ?",
           showReadingTime: true,
           feedOptions: {
             type: "all",
@@ -50,10 +45,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "dark",
+      },
+      metadata: [{ property: "og:type", content: "website" }],
       navbar: {
         title: "necraidan",
         logo: {
-          alt: "My Site Logo",
+          alt: "nekureidan logo",
           src: "img/nekureidan.svg",
         },
         items: [
@@ -67,11 +66,6 @@ const config = {
               { to: "/uses", label: "Uses" },
             ],
           },
-          // {
-          //   to: "/front-end-chronicles",
-          //   label: "Front-End Chronicles",
-          //   position: "left",
-          // },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
