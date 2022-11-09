@@ -28,7 +28,7 @@ const config = {
         docs: false,
         blog: {
           blogDescription:
-            "What if the Blue Eyes White Dragon was in typescript ?",
+            "What if slifer the sky dragon was built with Angular ?",
           showReadingTime: true,
           feedOptions: {
             type: "all",
