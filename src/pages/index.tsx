@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={` ${siteConfig.title} | 🍕💻 Benjamin Auzanneau (necraidan) - engineered with beers and pizza.`}
-      description="Description will go into a meta tag in <head />">
+      description=={` ${siteConfig.description} }>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
