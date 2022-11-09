@@ -3,6 +3,7 @@ slug: angular-14-en-3-features
 title: Angular 14 en 3 features
 authors: [necraidan]
 tags: [angular, javascript, frontend]
+image: https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80
 ---
 
 Depuis le 2 juin 2022, la core team Angular a released la version 14 d'Angular.
