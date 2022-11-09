@@ -7,7 +7,6 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "necraidan",
-  description: "What if the Blue Eyes White Dragon was in typescript ?",
   tagline: "Senior Software Engineer.",
   url: "https://necraidan.com",
   baseUrl: "/",
