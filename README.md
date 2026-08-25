@@ -1,41 +1,51 @@
-# Website
+# necraidan.github.io
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Liste des side projects de [necraidan](https://github.com/necraidan) exposés sur internet,
+hébergés sur GitHub Pages ou Vercel.
 
-### Installation
+**→ [necraidan.github.io](https://necraidan.github.io/)**
 
-```
-$ yarn
-```
+## Stack
 
-### Local Development
+- [Astro](https://astro.build) en sortie 100 % statique, zéro framework côté client
+- CSS vanilla avec thème clair/sombre via `prefers-color-scheme`
+- Un seul `<script>` inline pour le filtre par hébergeur
+- Déploiement automatique sur GitHub Pages via GitHub Actions à chaque push sur `main`
 
-```
-$ yarn start
-```
+## Ajouter ou modifier un projet
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Tout est dans [`src/data/projects.ts`](src/data/projects.ts). Chaque entrée :
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```ts
+{
+  name: 'Filigrane.me',
+  description: 'Une phrase, en français.',
+  url: 'https://necraidan.github.io/filigrane-me/',
+  platform: 'github-pages', // ou 'vercel'
+  repo: 'https://github.com/necraidan/filigrane-me', // omettre si le dépôt est privé
+  kind: 'app', // 'app' | 'lib'
+  year: 2026,
+  tags: ['Angular 21', 'Canvas API'],
+}
 ```
 
-Not using SSH:
+Le tri est fait par année décroissante puis par nom.
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+## Développement
+
+```sh
+npm install
+npm run dev          # http://localhost:4321
+npm run build        # génère dist/
+npm run preview      # sert dist/
+npm run check        # astro check (types)
+npm run format       # prettier
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Node ≥ 22 (voir `.nvmrc`).
+
+## Historique
+
+Ce dépôt a connu plusieurs vies : Angular (2018–2019, branches `feature/archive_1`,
+`feature/2.0`, `gh-pages`), HTML statique (2021, branche `master`), Nuxt (`feature/nuxt`),
+puis Docusaurus (2022, branche `dev`). La version actuelle repart de zéro sur `main`.

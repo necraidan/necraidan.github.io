@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import { projects, PLATFORM_LABEL, KIND_LABEL, type Platform } from '../data/projects';
+
+const title = 'necraidan — side projects';
+const description =
+  'Les side projects de Benjamin Auzanneau (necraidan) exposés sur GitHub Pages et Vercel : applications web et librairies.';
+
+const sorted = [...projects].sort((a, b) => b.year - a.year || a.name.localeCompare(b.name));
+const platforms = Object.keys(PLATFORM_LABEL) as Platform[];
+const count = (p: Platform) => projects.filter((x) => x.platform === p).length;
+const year = new Date().getFullYear();
+---
+
+<Base title={title} description={description}>
+  <a class="skip" href="#projets">Aller aux projets</a>
+
+  <header class="hero">
+    <p class="eyebrow">necraidan</p>
+    <h1>Side projects.</h1>
+    <p class="lead">
+      Des applications et librairies construites le soir et le week-end, pour apprendre, rire ou
+      résoudre un petit problème. Toutes sont en ligne, hébergées sur GitHub Pages ou Vercel.
+    </p>
+    <nav class="links" aria-label="Liens externes">
+      <a href="https://necraidan.com" rel="me">necraidan.com</a>
+      <a href="https://github.com/necraidan" rel="me">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="projets">
+    <div class="toolbar" role="group" aria-label="Filtrer par hébergeur">
+      <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">
+        Tous <span class="count">{projects.length}</span>
+      </button>
+      {
+        platforms.map((p) => (
+          <button type="button" class="chip" data-filter={p} aria-pressed="false">
+            {PLATFORM_LABEL[p]} <span class="count">{count(p)}</span>
+          </button>
+        ))
+      }
+    </div>
+
+    <ul class="grid" id="grid">
+      {
+        sorted.map((p) => (
+          <li class="card" data-platform={p.platform}>
+            <div class="card-head">
+              <span class={`kind kind--${p.kind}`}>{KIND_LABEL[p.kind]}</span>
+              <span class="year">{p.year}</span>
+            </div>
+            <h2>
+              <a href={p.url} class="card-link">
+                {p.name}
+              </a>
+            </h2>
+            <p class="desc">{p.description}</p>
+            <ul class="tags" aria-label="Technologies">
+              {p.tags.map((t) => (
+                <li>{t}</li>
+              ))}
+            </ul>
+            <div class="card-foot">
+              <span class={`platform platform--${p.platform}`}>{PLATFORM_LABEL[p.platform]}</span>
+              <span class="actions">
+                <a href={p.url}>Voir ↗</a>
+                {p.repo && <a href={p.repo}>Source</a>}
+              </span>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="empty" id="empty" hidden>Aucun projet pour ce filtre.</p>
+  </main>
+
+  <footer>
+    <p>
+      © {year} necraidan · <a href="https://github.com/necraidan/necraidan.github.io"
+        >Source de ce site</a
+      >
+      · Construit avec <a href="https://astro.build">Astro</a>.
+    </p>
+  </footer>
+</Base>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.chip');
+  const cards = document.querySelectorAll<HTMLLIElement>('.card');
+  const empty = document.getElementById('empty');
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const filter = chip.dataset.filter;
+      chips.forEach((c) => {
+        const active = c === chip;
+        c.classList.toggle('is-active', active);
+        c.setAttribute('aria-pressed', String(active));
+      });
+      let visible = 0;
+      cards.forEach((card) => {
+        const show = filter === 'all' || card.dataset.platform === filter;
+        card.hidden = !show;
+        if (show) visible++;
+      });
+      if (empty) empty.hidden = visible > 0;
+    });
+  });
+</script>
